@@ -47,7 +47,7 @@ npm run deploy:prod      # stamp + vercel deploy --prod from the repo root
 Every release appends an entry to `public/app-changes.json` **in the same
 commit** so users see what changed under Settings → What's new.
 
-Details and gotchas: `docs/ship-runbook.md`.
+Details and gotchas: `docs/ship-runbook.md`. Starting from this template with Claude Code? Paste `docs/setup-prompt.md` into your session.
 
 ## Layout
 
