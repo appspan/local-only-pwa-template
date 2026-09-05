@@ -25,7 +25,11 @@ automatically via the service worker. Verify everything; never guess.
 ## Gotchas
 
 - Vercel Hobby blocks deploys from unrecognized commit authors (hangs at
-  "Building…"). Fix the author; waiting doesn't help.
+  "Building…"). Fix the author; waiting doesn't help. The template's initial
+  commit is authored by GitHub's noreply address, so HEAD must be a real
+  commit before the first deploy.
+- The stable production URL is whatever `vercel inspect <deployment-url>`
+  lists under Aliases, not necessarily `<project>.vercel.app`.
 - `vercel deploy` without `--prod` makes an auth-protected preview of the
   production project. That is not staging. Staging is its own project.
 - Never bypass `local-state.js` for storage. Bare `localStorage` calls throw
