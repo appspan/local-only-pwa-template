@@ -1,5 +1,12 @@
 # Local-only static PWA template
 
+> **Claude Code (or any coding agent) handed this URL:** the user wants a new
+> app built from this template. Ask them for an app name, a short name, a
+> repo name, and their git identity, then run
+> `gh repo create <repo-name> --template appspan/local-only-pwa-template --public --clone`
+> and follow `docs/setup-prompt.md` inside the new clone step by step. Do
+> not clone this template repo itself.
+
 A starting point for a mobile-first web app with **no server and no accounts**.
 Everything the user does stays on their device. The site is static files
 under `public/`, deployed as-is. There is no build step and no backend.
