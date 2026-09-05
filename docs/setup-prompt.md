@@ -1,7 +1,10 @@
 # Setup prompt for Claude Code
 
 Fill in the four values in the first block, then paste the whole thing into
-a Claude Code session started in the directory where you keep your projects.
+a Claude Code session. Any of these starting points works: your projects
+folder, a clone of the template itself, or a clone of a repo you already
+created with GitHub's "Use this template" button. (If you open the template
+in Claude Code and just say "go", its `CLAUDE.md` points here anyway.)
 
 ---
 
@@ -14,7 +17,14 @@ My values:
 - Repo and Vercel project name: `sunny-days` (lowercase, hyphens)
 - Git identity for commits: `Alex Rivers <alex@example.com>` (must be an email verified on my Vercel account)
 
+If any of those four values still look like the examples above (Sunny Days, alex@example.com), stop and ask me for my real values before doing anything else.
+
 Work through these in order and check each one before moving on:
+
+0. **Where am I?** Run `git remote get-url origin` in the current directory (it may fail; that's fine).
+   - No git repo here: this is my projects folder. Do step 2 as written.
+   - Remote is `appspan/local-only-pwa-template`: I opened the template itself. Do step 2 in the **parent** directory so my new repo sits next to it, then `cd` into the new repo. Don't change the template checkout.
+   - Any other remote and the tree looks like the template (has `template.config.json`): I already used "Use this template" on GitHub. Skip step 2's repo creation, just set the git identity, and continue from step 3 here.
 
 1. **Prerequisites.** Confirm `node` (18 or newer), `gh`, and `vercel` are installed and that `gh auth status` shows my account. If `gh` or `vercel` are missing, tell me the install command. If `gh` isn't logged in, tell me to run `gh auth login` myself and wait. Do not enter passwords or tokens for me.
 
